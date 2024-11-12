@@ -110,6 +110,31 @@
                         </form>
                     </div>
                 </div>
+                <script>
+                    // Select the form element
+const form = document.querySelector(".col-lg-7 form");
+
+// Add an event listener for form submission
+form.addEventListener("submit", function(event) {
+    event.preventDefault(); // Prevent the form from submitting to a server
+
+    // Capture form data
+    const formData = {
+        name: form.querySelector('input[placeholder="Your Name"]').value,
+        email: form.querySelector('input[placeholder="Your Email"]').value,
+        subject: form.querySelector('input[placeholder="Subject"]').value,
+        message: form.querySelector('textarea[placeholder="Message"]').value,
+    };
+
+    // Store the data in local storage
+    localStorage.setItem("formData", JSON.stringify(formData));
+    alert("Your message has been stored locally!");
+
+    // Clear the form fields
+    form.reset();
+});
+
+                </script>
                 <div class="col-lg-5 wow slideInUp" data-wow-delay="0.6s">
                     <div class="bg-light rounded p-5">
                         <div class="d-flex align-items-center mb-2">
@@ -135,9 +160,9 @@
                         </div>
                         <div>
                             <iframe class="position-relative w-100"
-        src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d3635.1686881931523!2d74.53227927491515!3d16.556530534195794!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e3!4m5!1s0x3bc0e700639912ad%3A0x6f5ca4c0a9db35bf!2sDr.Ambedkar%20Nagar%20Sadalga!3m2!1d16.5594173!2d74.5367583!4m5!1s0x3bc0e700639912ad%3A0x6f5ca4c0a9db35bf!2sHG5P%2BQP6%20Dr.Ambedkar%20Nagar%20Sadalga%2C%20Sadalga%2C%20Karnataka%20591239!3m2!1d16.5594173!2d74.5367583!5e1!3m2!1sen!2sin!4v1731212609304!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>"
-        frameborder="0" style="height: 230px; border:0;" allowfullscreen="" aria-hidden="false"
-        tabindex="0"></iframe>
+        src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d3635.1686881931523!2d74.53227927491515!3d16.556530534195794!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e3!4m5!1s0x3bc0e700639912ad%3A0x6f5ca4c0a9db35bf!2sDr.Ambedkar%20Nagar%20Sadalga!3m2!1d16.5594173!2d74.5367583!4m5!1s0x3bc0e700639912ad%3A0x6f5ca4c0a9db35bf!2sHG5P%2BQP6%20Dr.Ambedkar%20Nagar%20Sadalga%2C%20Sadalga%2C%20Karnataka%20591239!3m2!1d16.5594173!2d74.5367583!5e1!3m2!1sen!2sin!4v1731212609304!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        
+                         </iframe>
                         </div>
                     </div>
                 </div>
@@ -203,7 +228,7 @@
                     <p class="mb-md-0">&copy; <a class="text-white border-bottom" href="#">Your Site Name</a>. All Rights Reserved.</p>
                 </div>
                 <div class="col-md-6 text-center text-md-end">
-                    <p class="mb-0">Designed by <a class="text-white border-bottom" href="https://htmlcodex.com">Sujit Malage</a></p>
+                    <p class="mb-0">Designed by <a class="text-white border-bottom" href="https://malagesujit838.wixsite.com/sujitmalage/">Sujit Malage</a></p>
                 </div>
             </div>
         </div>
@@ -222,6 +247,8 @@
     <script src="lib/easing/easing.min.js"></script>
     <script src="lib/waypoints/waypoints.min.js"></script>
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
