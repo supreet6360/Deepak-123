@@ -70,7 +70,7 @@
         <div class="row py-5">
             <div class="col-12 text-center">
                 <h1 class="display-1 text-white animated zoomIn">Contact</h1>
-                <a href="" class="h4 text-white">Home</a>
+                <a href="index.html" class="h4 text-white">Home</a>
                 <i class="far fa-circle text-white px-2"></i>
                 <a href="" class="h4 text-white">Contact</a>
             </div>
@@ -80,7 +80,7 @@
 
 
     <!-- Contact Start -->
-    <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
+<!--    <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
         <div class="container">
             <div class="text-center mx-auto mb-5" style="max-width: 600px;">
                 <h5 class="text-primary text-uppercase" style="letter-spacing: 5px;">Contact Us</h5>
@@ -134,7 +134,65 @@ form.addEventListener("submit", function(event) {
     form.reset();
 });
 
-                </script>
+                </script> --->
+
+    <div class="bg-light rounded p-5">
+
+<form id="contactForm" action="https://formsubmit.co/ajax/malagesujit838@gmail.com" method="POST">
+
+<div class="row g-3">
+
+<div class="col-6">
+<input type="text" name="name" class="form-control border-0 px-4" placeholder="Your Name" style="height: 55px;" required>
+</div>
+
+<div class="col-6">
+<input type="email" name="email" class="form-control border-0 px-4" placeholder="Your Email" style="height: 55px;" required>
+</div>
+
+<div class="col-12">
+<input type="text" name="subject" class="form-control border-0 px-4" placeholder="Subject" style="height: 55px;" required>
+</div>
+
+<div class="col-12">
+<textarea name="message" class="form-control border-0 px-4 py-3" rows="8" placeholder="Message" required></textarea>
+</div>
+
+<input type="hidden" name="_captcha" value="false">
+
+<div class="col-12">
+<button class="btn btn-primary w-100 py-3" type="submit">Send Message</button>
+</div>
+
+</div>
+
+</form>
+
+</div>
+    <script>
+const form = document.getElementById("contactForm");
+
+form.addEventListener("submit", function(e){
+
+e.preventDefault();
+
+fetch(form.action,{
+method:"POST",
+body:new FormData(form),
+headers:{
+'Accept':'application/json'
+}
+})
+.then(response=>{
+alert("✅ Message Sent Successfully!");
+form.reset();
+})
+.catch(error=>{
+alert("❌ Something went wrong!");
+});
+
+});
+</script>
                 <div class="col-lg-5 wow slideInUp" data-wow-delay="0.6s">
                     <div class="bg-light rounded p-5">
                         <div class="d-flex align-items-center mb-2">
@@ -179,21 +237,21 @@ form.addEventListener("submit", function(event) {
                 <div class="col-lg-3 col-md-6">
                     <h3 class="text-white mb-4">Quick Links</h3>
                     <div class="d-flex flex-column justify-content-start">
-                        <a class="text-light mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Home</a>
+                        <a class="text-light mb-2" href="index.html"><i class="bi bi-arrow-right text-primary me-2"></i>Home</a>
                         <a class="text-light mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>About Us</a>
-                        <a class="text-light mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Our Services</a>
+                        <a class="text-light mb-2" href="service.html"><i class="bi bi-arrow-right text-primary me-2"></i>Our Services</a>
                         <a class="text-light mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Latest Blog</a>
-                        <a class="text-light" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Contact Us</a>
+                        <a class="text-light" href="contact.html"><i class="bi bi-arrow-right text-primary me-2"></i>Contact Us</a>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <h3 class="text-white mb-4">Popular Links</h3>
                     <div class="d-flex flex-column justify-content-start">
-                        <a class="text-light mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Home</a>
+                        <a class="text-light mb-2" href="index.html"><i class="bi bi-arrow-right text-primary me-2"></i>Home</a>
                         <a class="text-light mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>About Us</a>
-                        <a class="text-light mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Our Services</a>
+                        <a class="text-light mb-2" href="service.html"><i class="bi bi-arrow-right text-primary me-2"></i>Our Services</a>
                         <a class="text-light mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Latest Blog</a>
-                        <a class="text-light" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Contact Us</a>
+                        <a class="text-light" href="contact.html"><i class="bi bi-arrow-right text-primary me-2"></i>Contact Us</a>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6">
